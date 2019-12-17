@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  margin: auto;
+  padding: 20px 30px;
+  max-width: 960px; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
