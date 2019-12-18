@@ -1,0 +1,7 @@
+.productsSection {
+  display: flex;
+  flex-direction: column; }
+
+@media screen and (min-width: 801px) {
+  .productsSection {
+    flex-direction: row; } }

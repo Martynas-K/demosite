@@ -1,0 +1,14 @@
+.messageUs {
+  margin-bottom: 30px;
+  width: 100%;
+  min-height: 250px;
+  min-width: 250px;
+  color: #ffffff;
+  background-color: pink; }
+
+@media screen and (min-width: 801px) {
+  .messageUs {
+    width: 35%;
+    min-width: 250px;
+    min-height: 0;
+    margin-bottom: 0; } }
