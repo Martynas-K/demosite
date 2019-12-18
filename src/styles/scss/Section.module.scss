@@ -1,0 +1,12 @@
+$breakpoint: 801px;
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: $breakpoint) {
+  .content {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,47 @@
+.sectionWrapper {
+  margin: 0; }
+
+.weatherWrapper {
+  width: 100%;
+  padding-top: 100%;
+  background-image: url("../../images/snowflake.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.productWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px; }
+  .productWrapper > * {
+    margin: 15px 0;
+    height: 50%;
+    padding-top: 60%;
+    background-color: bisque; }
+  .productWrapper :first-child {
+    margin-top: 0; }
+  .productWrapper :last-child {
+    margin-bottom: 0; }
+
+.title, .subTitle {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 30px;
+  color: #000000; }
+
+.subTitle {
+  font-size: 18px; }
+
+@media screen and (min-width: 801px) {
+  .sectionWrapper {
+    margin: 0 30px; }
+  .weatherWrapper {
+    width: 50%;
+    padding-top: 50%;
+    margin-right: 30px; }
+  .productWrapper {
+    width: 50%;
+    margin-top: 0; }
+    .productWrapper > * {
+      padding-top: 0; } }
