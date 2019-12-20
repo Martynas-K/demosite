@@ -1,30 +1,31 @@
 .navbar {
+  min-width: 310px;
   font-size: 18px;
   background-color: #448ccb; }
   .navbar * {
     color: #fff; }
-  .navbar li, .navbar a {
-    list-style-type: none;
-    text-decoration: none; }
 
 .navTop {
   color: #fff; }
-  .navTop a {
+  .navTop .navTopListItemLink {
     display: inline-block; }
-  .navTop ul li:after {
+  .navTop .navTopList .navTopListItem:after {
     content: "|"; }
-  .navTop ul li:last-child:after {
+  .navTop .navTopList .navTopListItem:last-child:after {
     content: ""; }
 
 .navTopList {
   color: #fff;
   display: flex; }
-  .navTopList li:first-child a {
+  .navTopList .navTopListItem:first-child .navTopListItemLink {
     padding-left: 0; }
-  .navTopList li a:hover {
+  .navTopList .navTopListItem:first-child :hover {
+    margin-left: -10px;
+    padding-left: 10px; }
+  .navTopList .navTopListItem .navTopListItemLink:hover {
     background-color: #357fc0; }
 
-.navTopLink {
+.navTopListItemLink {
   padding: 15px 10px; }
 
 .navLogo {
@@ -40,22 +41,42 @@
   justify-content: space-between;
   align-items: baseline;
   font-weight: bold; }
-  .mainMenu li:last-child a {
-    padding-right: 0; }
 
 .navbarToggle {
-  display: block;
-  float: none; }
+  display: flex;
+  justify-content: flex-end; }
+
+.navbarIcon {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  width: 50px;
+  height: 50px;
+  padding: 4px 0 0 12px;
+  border-radius: 10px;
+  background-color: #2a6598;
+  font-size: 30px;
+  cursor: pointer; }
+
+.navMenuContainer {
+  position: absolute;
+  top: 95px;
+  right: 30px;
+  z-index: 5; }
 
 .dropdownArrow:last-of-type {
   display: none; }
 
-.navBottomList {
+.navMainMenuList {
   display: flex; }
-  .navBottomList li a:hover, .navBottomList .dropdown:hover .dropBtn {
-    background-color: #3072ac; }
 
-.navBottomLink, .dropBtn {
+.navMainMenuListItem {
+  padding: 0 10px; }
+  .navMainMenuListItem:hover {
+    background-color: #3072ac;
+    color: #000000; }
+
+.navMainMenuLink, .dropBtn {
   padding: 15px 10px;
   display: inline-block; }
 
@@ -63,6 +84,12 @@
   display: inline-block; }
   .dropdown:hover .dropdownShape {
     display: block; }
+  .dropdown:hover .caretDownIcon {
+    opacity: 0;
+    transition: opacity 0.5s; }
+
+.caretDownIcon {
+  margin-left: 5px; }
 
 .dropBtn {
   font-size: inherit;
@@ -72,6 +99,8 @@
   background-color: inherit;
   font-family: inherit;
   margin: 0; }
+  .dropBtn:hover {
+    background-color: #3072ac; }
 
 .dropdownShape {
   display: none;
@@ -93,7 +122,7 @@
   padding: 15px 8px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1; }
-  .dropdownList a {
+  .dropdownList .dropdownListItem {
     color: #ffffff;
     padding: 5px 10px;
     text-decoration: none;
@@ -104,45 +133,45 @@
   background-color: #ffffff;
   color: #000000; }
 
-.navbarIcon {
-  justify-content: center;
-  align-items: center;
-  display: none;
-  width: 30px;
-  height: 30px;
-  padding: 10px 13px 20px 17px;
-  border-radius: 10px;
-  background-color: #2a6598;
-  font-size: 30px;
-  cursor: pointer; }
-
 @media screen and (max-width: 800px) {
-  body {
-    background-color: pink; }
   .navTop {
     display: none; }
   .mainMenu .dropdownArrow:last-of-type {
     display: block; }
-  .dropdownArrow {
-    margin-left: 120px; }
+  .mainMenu .dropdownArrow {
+    margin-left: 145px; }
   .navbarIcon {
     display: block; }
-  .navBottomList {
+  .navMainMenuList {
     display: block;
     background-color: #000000;
     width: 180px; }
-  .navBottomListItem {
-    padding: 0 10px; }
-  .navBottomLink, .dropBtn {
+    .navMainMenuList .navMainMenuListItem:first-child {
+      padding-top: 15px; }
+    .navMainMenuList .navMainMenuListItem:last-child {
+      padding-bottom: 15px; }
+  .navMainMenuLink {
     padding-left: 10px;
-    width: calc(100% - 20px); }
-  .navBottomLink:hover {
-    background-color: red;
-    color: #000000; }
+    width: 100%; }
+  .dropdown {
+    width: 100%;
+    padding: 0 10px; }
+  .dropBtn {
+    width: 100%;
+    display: flex;
+    align-items: center; }
+    .dropBtn:hover {
+      background-color: #ffffff;
+      color: #000000; }
   .dropdownList {
     position: absolute;
     width: 180px;
-    top: -40px;
-    right: 81%; }
-    .dropdownList a {
-      padding: 15px 10px; } }
+    top: -50px;
+    right: 87%; }
+    .dropdownList .dropdownListItem {
+      padding: 15px 10px; }
+  .navMainMenuLink:hover {
+    background-color: #ffffff;
+    color: #000000; }
+  .navMainMenuListItem:hover {
+    background-color: inherit; } }

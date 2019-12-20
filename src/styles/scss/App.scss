@@ -1,3 +1,5 @@
+html{ scroll-behavior: smooth; }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,17 +8,20 @@
 
 .container {
   margin: auto;
+  height: 100%;
   padding: 20px 30px;
-  max-width: 960px;
+  max-width: 1200px;
 }
 
-.show {
-  display: block;
-}
+.show { display: block; }
 
-.hide {
-  display: none;
-}
+.hide { display: none; }
+
+
+
+
+
+
 
 
 

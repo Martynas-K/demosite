@@ -1,0 +1,46 @@
+$breakpoint: 801px;
+
+.article {
+  margin-left: 0;
+  width: 100%;
+  height: inherit;
+}
+
+.articleImage {
+  height: 180px;
+  background-image: url("../../images/coffee-bed.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.articleContent {
+  background-color: #d3d3d3;
+  padding: 25px 40px;
+  height: 100%;
+}
+
+.articleTitle {
+  padding-bottom: 20px ;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.articleText p {
+  font-size: 14px;
+  margin: 20px 0;
+  &:first-child { margin-top: 0 }
+  &:last-child { margin-bottom: 0 }
+}
+
+@media screen and (min-width: $breakpoint) {
+  .article {
+    width: 70%;
+    margin-left: 30px;
+  }
+
+  .articleContent {
+    height: calc(100% - 180px);
+  }
+}
+

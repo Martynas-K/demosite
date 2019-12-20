@@ -1,0 +1,31 @@
+$breakpoint: 801px;
+
+.weatherWrapper {
+  position: relative;
+  padding-top: 100%;
+  width: 100%;
+  height: 0;
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.weatherImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: $breakpoint) {
+  .weatherWrapper {
+    margin-right: 30px;
+    margin-bottom: 0;
+    padding-top: 0;
+    height: initial;
+  }
+  .weatherImg{
+    position: static;
+    height: initial;
+  }
+}

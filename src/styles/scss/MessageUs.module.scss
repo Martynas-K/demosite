@@ -1,0 +1,72 @@
+$breakpoint: 801px;
+$base-color: #448ccb;
+
+.messageUs {
+  margin: 30px 0;
+  min-height: 250px;
+  min-width: 250px;
+  color: #ffffff;
+}
+
+.label {
+  padding: 20px 0 10px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.inputStyle {
+  width: 100%;
+  padding: 15px;
+  border: solid 3px #d3d3d3;
+  outline: none;
+  &:focus {
+    border: solid 3px #000000;
+  }
+}
+
+.credentialsInput { height: 30px; }
+
+.messageInput {
+  margin-bottom: 20px;
+  height: 200px;
+}
+
+.btnWrapper {
+  position: relative;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.btn {
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+  border: solid $base-color 3px;
+  outline: none;
+  color: $base-color;
+  font-weight: bold;
+  font-size: 14px;
+  &:hover {
+    cursor: pointer;
+    background-color: $base-color;
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+  .messageUs {
+    width: 30%;
+    min-width: 250px;
+    min-height: 0;
+    margin: 35px 30px 0 30px;
+  }
+
+  .btnWrapper {
+    padding-right: 30px;
+    .btn { width: 200px; }
+  }
+}

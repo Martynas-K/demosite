@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import styles from '../styles/scss/Navbar.module.scss';
-import '../styles/css/App.css'
-
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faBars} from '@fortawesome/free-solid-svg-icons'
-import {faCaretDown} from '@fortawesome/free-solid-svg-icons';
+import {faBars, faCaretDown} from '@fortawesome/free-solid-svg-icons'
 
 class Navbar extends Component {
     state =  {
         menuOpen: false,
-        isDesktop: false,
-        breakpoint: 800,
+        windowIsDesktopSize: false,
+    };
+
+    setBreakpointWidth = () => {
+        return 800;
     };
 
     componentDidMount = () => {
@@ -23,9 +23,9 @@ class Navbar extends Component {
     }
 
     handleWindowSize = () => {
-        let isDesktop = window.innerWidth > this.state.breakpoint;
+        let windowIsDesktopSize = window.innerWidth > this.setBreakpointWidth();
         this.setState({
-            isDesktop
+            windowIsDesktopSize
         });
     };
 
@@ -33,10 +33,6 @@ class Navbar extends Component {
         this.setState({
             menuOpen : !this.state.menuOpen
         });
-    };
-
-    showMenu = () => {
-        return (this.state.isDesktop || this.state.menuOpen) ? "show" : "hide";
     };
 
     render() {
@@ -52,7 +48,6 @@ class Navbar extends Component {
                             <li className={styles.navTopListItem}><a href="#" className={styles.navTopListItemLink}>AND LAST ONE</a></li>
                         </ul>
                     </div>
-
                     <div className={styles.navBottom}>
                         <a href="#" className={styles.navLogo}><b>DEMO</b>SITE</a>
                         <div className={styles.mainMenu}>
@@ -61,7 +56,7 @@ class Navbar extends Component {
                                     <FontAwesomeIcon icon={faBars}/>
                                 </div>
                             </div>
-                            <div className={this.showMenu()}>
+                            <div className={styles.navMenuContainer + (this.state.menuOpen || this.state.windowIsDesktopSize ? " show" : " hide")}>
                                 <div className={styles.dropdownArrow}> </div>
                                 <ul className={styles.navMainMenuList}>
                                     <li className={styles.navMainMenuListItem}><a href="#" className={styles.navMainMenuLink}>HOME</a></li>

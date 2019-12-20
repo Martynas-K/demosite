@@ -1,8 +1,32 @@
 $breakpoint: 801px;
 
+a { color: #000000;
+    text-decoration: none;
+}
+li {list-style-type: none; }
+
 .content {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.contentInColumn {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.title, .subTitle {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 30px;
+  color: #000000;
+}
+
+.subTitle {
+  font-size: 18px;
 }
 
 @media screen and (min-width: $breakpoint) {

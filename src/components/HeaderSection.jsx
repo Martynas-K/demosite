@@ -3,19 +3,17 @@ import styles from "../styles/scss/Section.module.scss";
 import Welcome from "./Welcome";
 import Article from "./Article";
 
-
-class Section extends Component {
+class HeaderSection extends Component {
     render() {
         return (
             <div className="container">
-                asdadadad
-                <React.Fragment>
+                <div className={styles.content}>
                     <Welcome />
                     <Article />
-                </React.Fragment>
+                </div>
             </div>
         );
     }
 }
 
-export default Section;
+export default HeaderSection;
